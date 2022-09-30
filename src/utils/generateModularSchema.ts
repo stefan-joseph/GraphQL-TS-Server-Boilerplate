@@ -1,11 +1,7 @@
-// import * as glob from "glob";
-// import { readFileSync } from "fs";
-
+import { makeExecutableSchema } from "@graphql-tools/schema";
 import { loadFilesSync } from "@graphql-tools/load-files";
 import { mergeTypeDefs, mergeResolvers } from "@graphql-tools/merge";
 import * as path from "path";
-// import { addResolversToSchema } from "@graphql-tools/schema";
-import { makeExecutableSchema } from "@graphql-tools/schema";
 
 export const generateModularSchema = () => {
   const pathToModules = path.join(__dirname, "../modules");
